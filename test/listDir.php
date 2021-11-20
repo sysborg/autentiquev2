@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__. '/../src/autentique.class.php';
+    require_once __DIR__. '/../src/autoloader.php';
     use sysborg\autentiquev2\listDir;
     use sysborg\autentiquev2\autentique;
     
