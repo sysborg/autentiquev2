@@ -17,7 +17,7 @@
          * @var                      string
          */
         private string $query = '{
-            "query": "mutation { deleteFolder(id: "%s") }",
+            "query": "mutation { deleteFolder(id: \"%s\") }",
             "variables": {}
         }';
 
