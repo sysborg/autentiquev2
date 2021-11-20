@@ -7,7 +7,7 @@
          * @description-pt-BR:       Armazena informações e variáveis para esse layout
          * @var                      array
          */
-        private array $layoutInfo = [
+        protected array $layoutInfo = [
             'name' => NULL
         ];
 
