@@ -2,6 +2,8 @@
     namespace sysborg\autentiquev2;
 
     class listDir implements \sysborg\autentiquev2\layouts{
+        use utils;
+
         /**
          * @description-en-US:       Stores informations and variables for this layout
          * @description-pt-BR:       Armazena informações e variáveis para esse layout
@@ -34,10 +36,7 @@
          */
         public function __set(string $layoutInfoName, $val)
         {
-            $keys = array_keys($this->layoutInfo);
-            if(array_search($layoutInfoName, $keys)===-1)
-                throw new \Exception('en-US: No variable '. $layoutInfoName. ' has been founded! Verify the name and try again! | pt-BR: Nenhuma variável com o nome '. $layoutInfoName. ' foi encontrada! Verifique o nome e tente novamente!');
-
+            $this->verifyColumn($this->layoutInfo, $layoutInfoName);
             $this->layoutInfo[$layoutInfoName] = $val;
         }
 
@@ -52,10 +51,7 @@
          */
         public function __get(string $layoutInfoName)
         {
-            $keys = array_keys($this->layoutInfo);
-            if(array_search($layoutInfoName, $keys)===-1)
-                throw new \Exception('en-US: No variable '. $layoutInfoName. ' has been founded! Verify the name and try again! | pt-BR: Nenhuma variável com o nome '. $layoutInfoName. ' foi encontrada! Verifique o nome e tente novamente!');
-
+            $this->verifyColumn($this->layoutInfo, $layoutInfoName);
             return $this->layoutInfo[$layoutInfoName];
         }
 
