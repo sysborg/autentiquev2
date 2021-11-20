@@ -10,6 +10,7 @@
         private static array $loadPath = [
             'sysborg\autentiquev2\layouts'      => '/layouts.interface.php',
             'sysborg\autentiquev2\listDir'      => '/layouts/dir/listDir.class.php',
+            'sysborg\autentiquev2\createDir'    => '/layouts/dir/createDir.class.php',
             'sysborg\autentiquev2\utils'        => '/utils.traits.php',
             'sysborg\autentiquev2\autentique'   => '/autentique.class.php'
         ];
