@@ -32,7 +32,7 @@
          * @version                 1.0.0
          * @access                  public
          * @param                   
-         * @return                  string
+         * @return                  mixed string | array
          */
         public function parse() : string | array;
     }
