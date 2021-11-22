@@ -30,25 +30,6 @@
         }';
 
         /**
-         * {
-            * "email": "troque-esse-email-que-e-publico@tuamaeaquelaursa.com",
-            * "action": "SIGN",
-            'positions' => [
-                        [
-                            'x' => '50', // Posição do Eixo X da ASSINATURA (0 a 100)
-                            'y' => '80', // Posição do Eixo Y da ASSINATURA (0 a 100)
-                            'z' => '1', // Página da ASSINATURA
-                        ],
-                        [
-                            'x' => '50', // Posição do Eixo X da ASSINATURA (0 a 100)
-                            'y' => '50', // Posição do Eixo Y da ASSINATURA (0 a 100)
-                            'z' => '2', // Página da ASSINATURA
-                        ],
-                    ],
-         * }
-         */
-
-        /**
          * @description-en-US       Add signers to the doc with first sign position
          * @description-pt-BR       Adiciona assinantes ao documento com a primeira posição de assinatura
          * author                   Anderson Arruda < andmarruda@gmail.com >
