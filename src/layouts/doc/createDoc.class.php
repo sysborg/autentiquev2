@@ -1,7 +1,7 @@
 <?php
     namespace sysborg\autentiquev2;
 
-class createDir extends common implements \sysborg\autentiquev2\layouts{
+class createDoc extends common implements \sysborg\autentiquev2\layouts{
         /**
          * @description-en-US:       Stores informations and variables for this layout
          * @description-pt-BR:       Armazena informações e variáveis para esse layout
