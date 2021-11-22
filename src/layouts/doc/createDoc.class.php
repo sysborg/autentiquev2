@@ -26,7 +26,7 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
          */
         private string $query = '{
             "query": "mutation CreateDocumentMutation( $document: DocumentInput!, $signers: [SignerInput!]!, $file: Upload! ) { createDocument( document: $document, signers: $signers, file: $file ) { id name refusable sortable created_at signatures { public_id name email created_at action { name } link { short_link } user { id name email } } } }",
-            "variables": { "document": { "name": "%s" }, "signers": [%s], "file": null }
+            "variables": { "document": { "name": "%s" }, "signers": %s, "file": null }
         }';
 
         /**
@@ -45,7 +45,7 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
         {
             $this->verifyEmail('email', $email);
             $idx = count($this->signers);
-            $this->signers[$idx] = [
+            array_push($this->signers, [
                 'email'     => $email,
                 'action'    => 'SIGN',
                 'positions' => [[
@@ -53,7 +53,7 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
                     'y' => $y,
                     'z' => $x
                 ]]
-            ];
+            ]);
 
             return new class($this->signers[$idx]){
                 /**
@@ -118,13 +118,13 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
 
             $query = sprintf($this->query, $this->name, json_encode($this->signers));
 
-            $postfields = [
+            $arr = [
                 'operations' => $query,
                 'map'        => '{"file": ["variables.file"]}',
                 'file'       => new \CURLFile($this->file)
             ];
 
-            return $postfields;
+            return $arr;
         }
     }
 ?>
