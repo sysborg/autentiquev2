@@ -44,7 +44,8 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
         public function addSigners(string $email, int $x, int $y, int $z) : object
         {
             $this->verifyEmail('email', $email);
-            $idx = array_push($this->signers, [
+            $idx = count($this->signers);
+            $this->signers[$idx] = [
                 'email'     => $email,
                 'action'    => 'SIGN',
                 'positions' => [[
@@ -52,7 +53,7 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
                     'y' => $y,
                     'z' => $x
                 ]]
-            ]);
+            ];
 
             return new class($this->signers[$idx]){
                 /**
