@@ -34,6 +34,6 @@
          * @param                   
          * @return                  string
          */
-        public function parse() : string;
+        public function parse() : string | array;
     }
 ?>
