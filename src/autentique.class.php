@@ -12,7 +12,8 @@
         private array $apiInfo = [
             'url'       => 'https://api.autentique.com.br/v2/graphql',
             'token'     => NULL,
-            'devMode'   => false
+            'devMode'   => false,
+            'debug'     => false
         ];
 
         /**
@@ -72,18 +73,26 @@
          */
         public function transmit()
         {
+            $pfields = $this->layout->parse();
             $c=curl_init();
             curl_setopt_array($c, [
                 CURLOPT_URL => $this->url,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS =>$this->layout->parse(),
+                CURLOPT_POSTFIELDS => $this->layout->parse(),
                 CURLOPT_HTTPHEADER => [
                     'Authorization: Bearer '. $this->token,
-                    'Content-Type: application/json'
+                    (is_array($pfields) ? '' : 'Content-Type: application/json')
                 ]
             ]);
             $r = curl_exec($c);
+            if($this->debug){
+                $infos = curl_getinfo($c);
+                $error = curl_error($c);
+                echo '<pre>';
+                var_dump($infos, $error);
+                echo '</pre>';
+            }
             curl_close($c);
             return $r;
         }
