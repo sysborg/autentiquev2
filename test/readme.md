@@ -5,6 +5,7 @@ En-US:
   3. createDoc.php - Example of how to create a document and upload it on the autentique-v2 api.
   4. deleteDir.php - Example of how to delete a directory on the autentique-v2 api.
   5. listDir.php   - Example of how to list all existing directorys on the autentique-v2 api.
+  6. listDoc.php   - List all documents that are not in a directory on the autentique-v2 api.
   
 Pt-BR:
   Explicação sobre os arquivos de teste.
@@ -13,3 +14,4 @@ Pt-BR:
   3. createDoc.php - Exemplo de como criar e fazer o upload de um novo documento na api do autentique-v2.
   4. deleteDir.php - Exemplo de como deletar um diretório "pasta" existente na api do autentique-v2.
   5. listDir.php   - Exemplo de como listar todos os diretórios "pasta" existentes na api do autentique-v2.
+  6. listDoc.php   - Lista todos os documentos que não estão num diretório "pasta" na api do autentique-v2.
