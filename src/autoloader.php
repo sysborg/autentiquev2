@@ -13,6 +13,7 @@
             'sysborg\autentiquev2\listDir'      => '/layouts/dir/listDir.class.php',
             'sysborg\autentiquev2\createDir'    => '/layouts/dir/createDir.class.php',
             'sysborg\autentiquev2\deleteDir'    => '/layouts/dir/deleteDir.class.php',
+            'sysborg\autentiquev2\createDoc'    => '/layouts/doc/createDoc.class.php',
             'sysborg\autentiquev2\utils'        => '/utils.traits.php',
             'sysborg\autentiquev2\autentique'   => '/autentique.class.php'
         ];
