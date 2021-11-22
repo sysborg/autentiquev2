@@ -1,8 +1,6 @@
 <?php
     namespace sysborg\autentiquev2;
 
-use CURLFile;
-
 class createDir extends common implements \sysborg\autentiquev2\layouts{
         /**
          * @description-en-US:       Stores informations and variables for this layout
@@ -108,9 +106,9 @@ class createDir extends common implements \sysborg\autentiquev2\layouts{
          * @version                 1.0.0
          * @access                  public
          * @param                   
-         * @return                  string
+         * @return                  array
          */
-        public function parse() : string
+        public function parse() : array
         {
             $this->verifyFill('name', $this->name);
             $this->verifyFill('file', $this->file);
@@ -119,7 +117,11 @@ class createDir extends common implements \sysborg\autentiquev2\layouts{
 
             $query = sprintf($this->query, $this->name, json_encode($this->signers));
 
-            $postfields = '{"operations": '. $query. ', "map": "{"file": ["variables.file"]}, "file": '. new CURLFile($this->file). ' }';
+            $postfields = [
+                'operations' => $query,
+                'map'        => '{"file": ["variables.file"]}',
+                'file'       => new \CURLFile($this->file)
+            ];
 
             return $postfields;
         }
