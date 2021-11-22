@@ -1,7 +1,9 @@
 <?php
     namespace sysborg\autentiquev2;
 
-    class createDir extends common implements \sysborg\autentiquev2\layouts{
+use CURLFile;
+
+class createDir extends common implements \sysborg\autentiquev2\layouts{
         /**
          * @description-en-US:       Stores informations and variables for this layout
          * @description-pt-BR:       Armazena informações e variáveis para esse layout
@@ -26,7 +28,7 @@
          */
         private string $query = '{
             "query": "mutation CreateDocumentMutation( $document: DocumentInput!, $signers: [SignerInput!]!, $file: Upload! ) { createDocument( document: $document, signers: $signers, file: $file ) { id name refusable sortable created_at signatures { public_id name email created_at action { name } link { short_link } user { id name email } } } }",
-            "variables": { "document": { "name": "%s" }, "signers": [%s], "file" => "%s" }
+            "variables": { "document": { "name": "%s" }, "signers": [%s], "file": null }
         }';
 
         /**
@@ -115,7 +117,11 @@
             $this->verifyFile('file', $this->file);
             $this->verifyArray('signers', $this->signers);
 
-            return sprintf($this->query, $this->name);
+            $query = sprintf($this->query, $this->name, json_encode($this->signers));
+
+            $postfields = '{"operations": '. $query. ', "map": "{"file": ["variables.file"]}, "file": '. new CURLFile($this->file). ' }';
+
+            return $postfields;
         }
     }
 ?>
