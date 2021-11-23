@@ -29,10 +29,10 @@ Follow us:
   
 Contributors<br>
 1. Anderson Arruda<br>
-  a. Linkedin:  https://www.linkedin.com/in/anderson-a-sborg/
-  b. Instagram: https://instagram.com/andmarruda 
-  c. Github:    https://github.com/andmarruda 
-  d. Blog:      https://andersonarruda.com.br
+  a. Linkedin:  https://www.linkedin.com/in/anderson-a-sborg/<br>
+  b. Instagram: https://instagram.com/andmarruda <br>
+  c. Github:    https://github.com/andmarruda <br>
+  d. Blog:      https://andersonarruda.com.br<br>
 
 Pt-BR
 Documentação sobre a API: https://docs.autentique.com.br/api/sobre-o-graphql
@@ -55,15 +55,15 @@ Documentos:
 6. \sysborg\autentiquev2\rescueDoc  - Serve para resgatr informações do documento, assinatura e muito mais.
 7. \sysborg\autentiquev2\signDoc    - Serve para assinar um documento.
 
-Veja como utilizar na pasta de test em https://github.com/sysborg/autentiquev2/tree/main/test
-Veja nosso trabalho em: https://sysborg.com.br
-Siga-nos:
-  Facebook: https://facebook.com/sysborg
-  Instagram: https://instagram.com/sysborg_oficial
+Veja como utilizar na pasta de test em https://github.com/sysborg/autentiquev2/tree/main/test<br>
+Veja nosso trabalho em: https://sysborg.com.br<br>
+Siga-nos:<br>
+1. Facebook: https://facebook.com/sysborg
+2. Instagram: https://instagram.com/sysborg_oficial
   
-Contribuidores
-  Anderson Arruda
-  Linkedin: https://www.linkedin.com/in/anderson-a-sborg/
-  Instagram: https://instagram.com/andmarruda
-  Github:    https://github.com/andmarruda
-  Blog:      https://andersonarruda.com.br
+Contribuidores<br>
+1. Anderson Arruda<br>
+  a. Linkedin:  https://www.linkedin.com/in/anderson-a-sborg/<br>
+  b. Instagram: https://instagram.com/andmarruda <br>
+  c. Github:    https://github.com/andmarruda <br>
+  d. Blog:      https://andersonarruda.com.br<br>
