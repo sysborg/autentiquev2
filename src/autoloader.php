@@ -16,6 +16,7 @@
             'sysborg\autentiquev2\createDoc'    => '/layouts/doc/createDoc.class.php',
             'sysborg\autentiquev2\listDoc'      => '/layouts/doc/listDoc.class.php',
             'sysborg\autentiquev2\listDocDir'   => '/layouts/doc/listDocDir.class.php',
+            'sysborg\autentiquev2\moveDoc'      => '/layouts/doc/moveDoc.class.php',
             'sysborg\autentiquev2\utils'        => '/utils.traits.php',
             'sysborg\autentiquev2\autentique'   => '/autentique.class.php'
         ];
