@@ -6,6 +6,7 @@ En-US:
   4. deleteDir.php - Example of how to delete a directory on the autentique-v2 api.
   5. listDir.php   - Example of how to list all existing directorys on the autentique-v2 api.
   6. listDoc.php   - List all documents that are not in a directory on the autentique-v2 api.
+  7. listDocDir.php  - Example of how to list all documents inside a directory on the autentique-v2 api.
   
 Pt-BR:
   Explicação sobre os arquivos de teste.
@@ -15,3 +16,4 @@ Pt-BR:
   4. deleteDir.php - Exemplo de como deletar um diretório "pasta" existente na api do autentique-v2.
   5. listDir.php   - Exemplo de como listar todos os diretórios "pasta" existentes na api do autentique-v2.
   6. listDoc.php   - Lista todos os documentos que não estão num diretório "pasta" na api do autentique-v2.
+  7. listDocDir.php  - Exemplo de como listar todos os documentos dentro de um diretório "pasta" na api da autentique-v2.
