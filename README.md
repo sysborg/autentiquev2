@@ -3,6 +3,9 @@
 En-US
 Documentation about API: https://docs.autentique.com.br/api/sobre-o-graphql
 
+Required PHP 8 or greater.
+Soon at composer.
+
 I prefer to work this code based on layout's idea to build the GraphQL querys.
 There are several available resources of Autentique as follow:
 
@@ -43,6 +46,9 @@ Contributors<br>
 
 Pt-BR
 Documentação sobre a API: https://docs.autentique.com.br/api/sobre-o-graphql
+
+Requer PHP 8 ou superior.
+Em breve no composer.
 
 Preferi trabalhar esse código usando uma idéia de layout para querys do GraphQL.
 Dentre os layouts eu disponibilizei cada recurso disponível pelo sistema da Autentique dentre eles:
