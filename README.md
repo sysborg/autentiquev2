@@ -22,6 +22,17 @@ Documents:
 7. \sysborg\autentiquev2\signDoc    - Utilized to sign some document
 
 See how to use on test path at https://github.com/sysborg/autentiquev2/tree/main/test
+See our work at: https://sysborg.com.br
+Follow us:
+  Facebook: https://facebook.com/sysborg
+  Instagram: https://instagram.com/sysborg_oficial
+  
+Contributors
+  Anderson Arruda
+  Linkedin: https://www.linkedin.com/in/anderson-a-sborg/
+  Instagram: https://instagram.com/andmarruda
+  Github:    https://github.com/andmarruda
+  Blog:      https://andersonarruda.com.br
 
 Pt-BR
 Documentação sobre a API: https://docs.autentique.com.br/api/sobre-o-graphql
@@ -45,3 +56,14 @@ Documentos:
 7. \sysborg\autentiquev2\signDoc    - Serve para assinar um documento.
 
 Veja como utilizar na pasta de test em https://github.com/sysborg/autentiquev2/tree/main/test
+Veja nosso trabalho em: https://sysborg.com.br
+Siga-nos:
+  Facebook: https://facebook.com/sysborg
+  Instagram: https://instagram.com/sysborg_oficial
+  
+Contribuidores
+  Anderson Arruda
+  Linkedin: https://www.linkedin.com/in/anderson-a-sborg/
+  Instagram: https://instagram.com/andmarruda
+  Github:    https://github.com/andmarruda
+  Blog:      https://andersonarruda.com.br
