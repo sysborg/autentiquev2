@@ -21,6 +21,13 @@ Documents:
 6. \sysborg\autentiquev2\rescueDoc  - Utilized to rescue document's information, signature and alot more
 7. \sysborg\autentiquev2\signDoc    - Utilized to sign some document
 
+Autentique webhooks : https://docs.autentique.com.br/api/integracao/webhooks<br>
+The Webhook is utilized to receive a signal from autentique when something change at the document for example::<br>
+1. Sign the document
+2. Reject to sign the document
+
+To improve this we are developing something with pure php to receive this signal and converted it easily to any developer.<br>
+
 See how to use on test path at https://github.com/sysborg/autentiquev2/tree/main/test<br>
 See our work at: https://sysborg.com.br<br>
 Follow us:
@@ -54,6 +61,13 @@ Documentos:
 5. \sysborg\autentiquev2\moveDoc    - Serve para mover um documento para algum diretório "pasta".
 6. \sysborg\autentiquev2\rescueDoc  - Serve para resgatr informações do documento, assinatura e muito mais.
 7. \sysborg\autentiquev2\signDoc    - Serve para assinar um documento.
+
+Autentique webhooks : https://docs.autentique.com.br/api/integracao/webhooks<br>
+O Webhook serve para receber um estimulo da autentique assim que alguma coisa mudar no documento por exemplo:<br>
+1. Assinar o documento
+2. Rejeitar assinar o documento
+
+Para aprimorar isso estamos desenvolvendo algo pure php pra receber esse estímulo e poder converte-lo fácilmente para qualquer programador.<br>
 
 Veja como utilizar na pasta de test em https://github.com/sysborg/autentiquev2/tree/main/test<br>
 Veja nosso trabalho em: https://sysborg.com.br<br>
