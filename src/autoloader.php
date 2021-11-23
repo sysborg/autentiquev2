@@ -15,6 +15,7 @@
             'sysborg\autentiquev2\deleteDir'    => '/layouts/dir/deleteDir.class.php',
             'sysborg\autentiquev2\rescueDir'    => '/layouts/dir/rescueDir.class.php',
             'sysborg\autentiquev2\createDoc'    => '/layouts/doc/createDoc.class.php',
+            'sysborg\autentiquev2\deleteDoc'    => '/layouts/doc/deleteDoc.class.php',
             'sysborg\autentiquev2\listDoc'      => '/layouts/doc/listDoc.class.php',
             'sysborg\autentiquev2\listDocDir'   => '/layouts/doc/listDocDir.class.php',
             'sysborg\autentiquev2\moveDoc'      => '/layouts/doc/moveDoc.class.php',
