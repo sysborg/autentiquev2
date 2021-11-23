@@ -27,12 +27,12 @@ Follow us:
 1. Facebook: https://facebook.com/sysborg
 2. Instagram: https://instagram.com/sysborg_oficial
   
-Contributors
-  Anderson Arruda
-  Linkedin: https://www.linkedin.com/in/anderson-a-sborg/
-  Instagram: https://instagram.com/andmarruda
-  Github:    https://github.com/andmarruda
-  Blog:      https://andersonarruda.com.br
+Contributors<br>
+1. Anderson Arruda<br>
+  a. Linkedin:  https://www.linkedin.com/in/anderson-a-sborg/
+  b. Instagram: https://instagram.com/andmarruda 
+  c. Github:    https://github.com/andmarruda 
+  d. Blog:      https://andersonarruda.com.br
 
 Pt-BR
 Documentação sobre a API: https://docs.autentique.com.br/api/sobre-o-graphql
