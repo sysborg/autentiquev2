@@ -32,7 +32,7 @@
          */
         public function parse() : string
         {
-            return sprintf($this->query, $this->document_id, $this->folder_id);
+            return sprintf($this->query, $this->document_id);
         }
     }
 ?>
