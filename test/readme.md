@@ -8,8 +8,9 @@ En-US:
   6. listDoc.php   - List all documents that are not in a directory on the autentique-v2 api.
   7. listDocDir.php  - Example of how to list all documents inside a directory on the autentique-v2 api.
   8. moveDoc.php   - Example of how to move document to some directory on the autentique-v2 api.
-  9. rescueDoc.php  - Example of how to rescue document informations, signature information and other document informations on the autentique-v2 api.
-  10. signDoc.php   - Example of how to sign a document using autentique-v2 api.
+  9. rescueDir.php - Example of how to rescue directory information on the autentique-v2 api.
+  10. rescueDoc.php  - Example of how to rescue document informations, signature information and other document informations on the autentique-v2 api.
+  11. signDoc.php   - Example of how to sign a document using autentique-v2 api.
   
 Pt-BR:
   Explicação sobre os arquivos de teste.
@@ -21,5 +22,6 @@ Pt-BR:
   6. listDoc.php   - Lista todos os documentos que não estão num diretório "pasta" na api do autentique-v2.
   7. listDocDir.php  - Exemplo de como listar todos os documentos dentro de um diretório "pasta" na api da autentique-v2.
   8. moveDoc.php   - Exemplo de como mover um documento para um diretório "pasta" na api do autentique-v2.
-  9. rescueDoc.php  - Exemplo de como resgatar informações do documento, informações de assinatura, e outras informações do documento pela api do autentique-v2.
-  10. signDoc.php   - Exemplo de como assinar um documento usando a api da autentique-v2.
+  9. rescueDir.php - Exemplo de como resgatar informações de um diretório "pasta" pela api do autentique-v2.
+  10. rescueDoc.php  - Exemplo de como resgatar informações do documento, informações de assinatura, e outras informações do documento pela api do autentique-v2.
+  11. signDoc.php   - Exemplo de como assinar um documento usando a api da autentique-v2.
