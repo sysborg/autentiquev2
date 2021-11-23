@@ -21,6 +21,8 @@ Documents:
 6. \sysborg\autentiquev2\rescueDoc  - Utilized to rescue document's information, signature and alot more
 7. \sysborg\autentiquev2\signDoc    - Utilized to sign some document
 
+See how to use on test path at https://github.com/sysborg/autentiquev2/test
+
 Pt-BR
 Documentação sobre a API: https://docs.autentique.com.br/api/sobre-o-graphql
 
