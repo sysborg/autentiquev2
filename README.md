@@ -21,7 +21,7 @@ Documents:
 6. \sysborg\autentiquev2\rescueDoc  - Utilized to rescue document's information, signature and alot more
 7. \sysborg\autentiquev2\signDoc    - Utilized to sign some document
 
-See how to use on test path at https://github.com/sysborg/autentiquev2/test
+See how to use on test path at https://github.com/sysborg/autentiquev2/tree/main/test
 
 Pt-BR
 Documentação sobre a API: https://docs.autentique.com.br/api/sobre-o-graphql
@@ -43,3 +43,5 @@ Documentos:
 5. \sysborg\autentiquev2\moveDoc    - Serve para mover um documento para algum diretório "pasta".
 6. \sysborg\autentiquev2\rescueDoc  - Serve para resgatr informações do documento, assinatura e muito mais.
 7. \sysborg\autentiquev2\signDoc    - Serve para assinar um documento.
+
+Veja como utilizar na pasta de test em https://github.com/sysborg/autentiquev2/tree/main/test
