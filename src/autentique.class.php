@@ -63,6 +63,24 @@
         }
 
         /**
+         * @description-en-US       CURL's debug
+         * @description-pt-BR       Debug do CURL
+         * @author                  Anderson Arruda < andmarruda@gmail.com >
+         * @version                 1.0.0
+         * @access                  public
+         * @param                   CurlHandle $c
+         * @return                  void
+         */
+        public function curlDebug(\CurlHandle $c) : void
+        {
+            $infos = curl_getinfo($c);
+            $error = curl_error($c);
+            echo '<pre>';
+            var_dump($infos, $error);
+            echo '</pre>';
+        }
+
+        /**
          * @description-en-US       Transmit requisition of Autentique API
          * @description-pt-BR       Transmite a requisção da API do Autentique
          * @author                  Anderson Arruda < andmarruda@gmail.com >
@@ -86,13 +104,9 @@
                 ]
             ]);
             $r = curl_exec($c);
-            if($this->debug){
-                $infos = curl_getinfo($c);
-                $error = curl_error($c);
-                echo '<pre>';
-                var_dump($infos, $error);
-                echo '</pre>';
-            }
+            if($this->debug)
+                $this->curlDebug($c);
+                
             curl_close($c);
             return $r;
         }
