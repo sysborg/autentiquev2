@@ -1,7 +1,31 @@
 {
     "name": "sysborg/autentiquev2",
+    "type": "library",
     "description": "Integração php com a ferramenta autentique de assinatura digital de documentos",
+    "keywords": [
+        "autentique php",
+        "api",
+        "autentique",
+        "v2",
+        "assinatura documento digital"
+    ],
+    "authors": [
+      {
+        "name": "Sysborg",
+        "email": "contato@sysborg.com.br",
+        "role": "Company"
+      },
+      {
+          "name": "Anderson Matheus Arruda",
+          "email": "andmarruda@gmail.com",
+          "role": "developer"
+      }
+    ],
     "require": {
-        "php": ">=8.0"
-    }
+        "php": ">=8.0",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "homepage": "https://github.com/sysborg/autentiquev2",
+    "license": "MIT",
 }
