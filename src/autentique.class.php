@@ -79,7 +79,7 @@
                 CURLOPT_URL => $this->url,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS => $this->layout->parse(),
+                CURLOPT_POSTFIELDS => $pfields,
                 CURLOPT_HTTPHEADER => [
                     'Authorization: Bearer '. $this->token,
                     (is_array($pfields) ? '' : 'Content-Type: application/json')
