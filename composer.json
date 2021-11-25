@@ -1,0 +1,7 @@
+{
+    "name": "sysborg/autentiquev2",
+    "description": "Integração php com a ferramenta autentique de assinatura digital de documentos",
+    "require": {
+        "php": ">=8.0"
+    }
+}
