@@ -1,49 +1,5 @@
 # autentique-v2
 
-En-US
-Documentation about API: https://docs.autentique.com.br/api/sobre-o-graphql
-
-Required PHP 8 or greater.
-Soon at composer.
-
-I prefer to work this code based on layout's idea to build the GraphQL querys.
-There are several available resources of Autentique as follow:
-
-Directory:
-1. \sysborg\autentiquev2\createDir - Utilized to create a directory
-2. \sysborg\autentiquev2\deleteDir - Utilized to delete a existent directory by ID
-3. \sysborg\autentiquev2\listDir   - Utilized to list all existent directory
-4. \sysborg\autentiquev2\rescueDir - Utilized to rescue informations about directory
-
-Documents:
-1. \sysborg\autentiquev2\createDoc - Utilized to create and upload a document
-2. \sysborg\autentiquev2\deleteDoc - Utilized to delete a existing document by ID
-3. \sysborg\autentiquev2\listDoc   - Utilized to list all documents that are not inside a directory
-4. \sysborg\autentiquev2\listDocDir - Utilized to list all documents inside some directory
-5. \sysborg\autentiquev2\moveDoc    - Utilized to move documento inside some directory
-6. \sysborg\autentiquev2\rescueDoc  - Utilized to rescue document's information, signature and alot more
-7. \sysborg\autentiquev2\signDoc    - Utilized to sign some document
-
-Autentique webhooks : https://docs.autentique.com.br/api/integracao/webhooks<br>
-The Webhook is utilized to receive a signal from autentique when something change at the document for example::<br>
-1. Sign the document
-2. Reject to sign the document
-
-To improve this we are developing something with pure php to receive this signal and converted it easily to any developer.<br>
-
-See how to use on test path at https://github.com/sysborg/autentiquev2/tree/main/test<br>
-See our work at: https://sysborg.com.br<br>
-Follow us:
-1. Facebook: https://facebook.com/sysborg
-2. Instagram: https://instagram.com/sysborg_oficial
-  
-Contributors<br>
-1. Anderson Arruda<br>
-  a. Linkedin:  https://www.linkedin.com/in/anderson-a-sborg/<br>
-  b. Instagram: https://instagram.com/andmarruda <br>
-  c. Github:    https://github.com/andmarruda <br>
-  d. Blog:      https://andersonarruda.com.br<br>
-
 Pt-BR
 Documentação sobre a API: https://docs.autentique.com.br/api/sobre-o-graphql
 
@@ -82,6 +38,50 @@ Siga-nos:<br>
 2. Instagram: https://instagram.com/sysborg_oficial
   
 Contribuidores<br>
+1. Anderson Arruda<br>
+  a. Linkedin:  https://www.linkedin.com/in/anderson-a-sborg/<br>
+  b. Instagram: https://instagram.com/andmarruda <br>
+  c. Github:    https://github.com/andmarruda <br>
+  d. Blog:      https://andersonarruda.com.br<br>
+  
+En-US
+Documentation about API: https://docs.autentique.com.br/api/sobre-o-graphql
+
+Required PHP 8 or greater.
+Soon at composer.
+
+I prefer to work this code based on layout's idea to build the GraphQL querys.
+There are several available resources of Autentique as follow:
+
+Directory:
+1. \sysborg\autentiquev2\createDir - Utilized to create a directory
+2. \sysborg\autentiquev2\deleteDir - Utilized to delete a existent directory by ID
+3. \sysborg\autentiquev2\listDir   - Utilized to list all existent directory
+4. \sysborg\autentiquev2\rescueDir - Utilized to rescue informations about directory
+
+Documents:
+1. \sysborg\autentiquev2\createDoc - Utilized to create and upload a document
+2. \sysborg\autentiquev2\deleteDoc - Utilized to delete a existing document by ID
+3. \sysborg\autentiquev2\listDoc   - Utilized to list all documents that are not inside a directory
+4. \sysborg\autentiquev2\listDocDir - Utilized to list all documents inside some directory
+5. \sysborg\autentiquev2\moveDoc    - Utilized to move documento inside some directory
+6. \sysborg\autentiquev2\rescueDoc  - Utilized to rescue document's information, signature and alot more
+7. \sysborg\autentiquev2\signDoc    - Utilized to sign some document
+
+Autentique webhooks : https://docs.autentique.com.br/api/integracao/webhooks<br>
+The Webhook is utilized to receive a signal from autentique when something change at the document for example::<br>
+1. Sign the document
+2. Reject to sign the document
+
+To improve this we are developing something with pure php to receive this signal and converted it easily to any developer.<br>
+
+See how to use on test path at https://github.com/sysborg/autentiquev2/tree/main/test<br>
+See our work at: https://sysborg.com.br<br>
+Follow us:
+1. Facebook: https://facebook.com/sysborg
+2. Instagram: https://instagram.com/sysborg_oficial
+  
+Contributors<br>
 1. Anderson Arruda<br>
   a. Linkedin:  https://www.linkedin.com/in/anderson-a-sborg/<br>
   b. Instagram: https://instagram.com/andmarruda <br>
