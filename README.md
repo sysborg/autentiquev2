@@ -3,8 +3,20 @@
 Pt-BR
 Documentação sobre a API: https://docs.autentique.com.br/api/sobre-o-graphql
 
+Em breve transcreveremos essa lib em Python.
+
 Requer PHP 8 ou superior.
-Em breve no composer.
+Como instalar no composer?
+Faça o download do composer pelo site oficial: https://getcomposer.org/download/
+Após isso utilize o comando abaixo:
+```
+composer require sysborg/autentiquev2
+```
+
+Ou caso sua instalação seja somente naquela pasta utilize:
+```
+php composer.phar require sysborg/autentiquev2
+```
 
 Preferi trabalhar esse código usando uma idéia de layout para querys do GraphQL.
 Dentre os layouts eu disponibilizei cada recurso disponível pelo sistema da Autentique dentre eles:
@@ -47,8 +59,20 @@ Contribuidores<br>
 En-US
 Documentation about API: https://docs.autentique.com.br/api/sobre-o-graphql
 
+Soon we will rewrite this code at Python.
+
 Required PHP 8 or greater.
-Soon at composer.
+How did you install composer?
+Make the install by official composer's website: https://getcomposer.org/download/
+After utilize the command above:
+```
+composer require sysborg/autentiquev2
+```
+
+Or in case that your installation is just in that directory utilize:
+```
+php composer.phar require sysborg/autentiquev2
+```
 
 I prefer to work this code based on layout's idea to build the GraphQL querys.
 There are several available resources of Autentique as follow:
