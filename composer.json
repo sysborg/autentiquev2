@@ -26,6 +26,11 @@
         "ext-curl": "*",
         "ext-json": "*"
     },
+    "autoload":  {
+        "files": [
+            "/src/autoloader.php"
+        ]
+    }
     "homepage": "https://github.com/sysborg/autentiquev2",
     "license": "MIT"
 }
