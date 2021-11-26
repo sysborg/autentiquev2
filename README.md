@@ -3,7 +3,7 @@
 Pt-BR
 Documentação sobre a API: https://docs.autentique.com.br/api/sobre-o-graphql
 
-Em breve transcreveremos essa lib em Python.
+Em breve essa lib em Python também.
 
 Requer PHP 8 ou superior.
 Como instalar no composer?
@@ -22,10 +22,10 @@ Preferi trabalhar esse código usando uma idéia de layout para querys do GraphQ
 Dentre os layouts eu disponibilizei cada recurso disponível pelo sistema da Autentique dentre eles:
 
 Diretórios "Pastas":
-1. \sysborg\autentiquev2\createDir - Serve para criar uma nova pasta
-2. \sysborg\autentiquev2\deleteDir - Serve para deletar uma pasta existente por ID
-3. \sysborg\autentiquev2\listDir   - Serve para listar todas as pastas existentes
-4. \sysborg\autentiquev2\rescueDir - Serve para resgatar informações de um diretório "pasta" por ID
+1. \sysborg\autentiquev2\createDir - Esse layout é utilizado para criar uma nova pasta "diretório"
+2. \sysborg\autentiquev2\deleteDir - Esse layout é utilizado para deletar uma pasta "diretório"
+3. \sysborg\autentiquev2\listDir   - Esse layout é utilizado para listar todos as pastas "diretórios" existentes
+4. \sysborg\autentiquev2\rescueDir - Esse layout é utilizado para resgatar informações sobre a pasta "diretório"
 
 Documentos:
 1. \sysborg\autentiquev2\createDoc - Serve para criar e fazer o upload de um documento
@@ -59,7 +59,7 @@ Contribuidores<br>
 En-US
 Documentation about API: https://docs.autentique.com.br/api/sobre-o-graphql
 
-Soon we will rewrite this code at Python.
+Soon this library in Python too.
 
 Required PHP 8 or greater.
 How did you install composer?
@@ -78,10 +78,10 @@ I prefer to work this code based on layout's idea to build the GraphQL querys.
 There are several available resources of Autentique as follow:
 
 Directory:
-1. \sysborg\autentiquev2\createDir - Utilized to create a directory
-2. \sysborg\autentiquev2\deleteDir - Utilized to delete a existent directory by ID
-3. \sysborg\autentiquev2\listDir   - Utilized to list all existent directory
-4. \sysborg\autentiquev2\rescueDir - Utilized to rescue informations about directory
+1. \sysborg\autentiquev2\createDir - This layout is utilized to create a directory
+2. \sysborg\autentiquev2\deleteDir - This layout is utilized to delete a directory
+3. \sysborg\autentiquev2\listDir   - This layout is utilized to list all existing directory
+4. \sysborg\autentiquev2\rescueDir - This layout is Utilized to rescue informations about directory
 
 Documents:
 1. \sysborg\autentiquev2\createDoc - Utilized to create and upload a document
