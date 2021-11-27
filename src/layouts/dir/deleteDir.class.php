@@ -16,7 +16,7 @@
          * @description-pt-BR:       Armazena a query do graphql
          * @var                      string
          */
-        private string $query = '{
+        protected string $query = '{
             "query": "mutation { deleteFolder(id: \"%s\") }",
             "variables": {}
         }';
