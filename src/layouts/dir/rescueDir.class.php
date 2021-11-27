@@ -16,7 +16,7 @@
          * @description-pt-BR:       Armazena a query do graphql
          * @var                      string
          */
-        private string $query = '{
+        protected string $query = '{
             "query": "query { folder(id: \"%s\") { id name type created_at } }",
             "variables": {}
         }';
