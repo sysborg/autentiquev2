@@ -6,7 +6,7 @@
     $token = ''; //en-US: put your autentique's token here https://www.autentique.com.br/ | pt-BR: coloque seu token da autentique aqui https://www.autentique.com.br/
 
     /**
-     * en-US: Calling the desired layout and passing the variables expecteds and disred. At this case the document creation and upload with multiplo point of the same signer
+     * en-US: Calling the desired layout and passing the variables expecteds and disred. At this case the document creation and upload with multiple point of the same signer
      * pt-BR: Invoca o layout desejado e passa as variáveis esperadas e desejadas. Nesse caso a criação e upload do documento com múltiplas assinaturas do mesmo assinante
      */
     $l = new createDoc();
