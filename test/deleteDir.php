@@ -6,8 +6,8 @@
     $token = ''; //en-US: put your autentique's token here https://www.autentique.com.br/ | pt-BR: coloque seu token da autentique aqui https://www.autentique.com.br/
 
     /**
-     * en-US: Calling the desired layout and passing the variables expecteds and disred. At this case the creation of a directory
-     * pt-BR: Invoca o layout desejado e passa as variáveis esperadas e desejadas. Nesse caso a criação de um diretório
+     * en-US: Calling the desired layout and passing the variables expecteds and disred. At this case deleting a directory
+     * pt-BR: Invoca o layout desejado e passa as variáveis esperadas e desejadas. Nesse caso deletando um diretório
      */
     $l = new deleteDir();
     $l->id = 'id'; //en-US: fill with the correctly id for you directory. | pt-BR: Preencha com o id correto para o seu diretório.
