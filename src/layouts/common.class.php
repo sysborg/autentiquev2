@@ -49,6 +49,7 @@
             return [
                 'class'        => get_called_class(),
                 'variables'    => $this->layoutInfo,
+                'signers'      => ((isset($this->signers)) ? $this->signers : NULL),
                 'graphqlQuery' => [
                     'formated' => $this->parse(),
                     'normal'   => $this->query
