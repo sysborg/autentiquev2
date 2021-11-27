@@ -18,7 +18,7 @@
          * @description-pt-BR:       Armazena a query do graphql
          * @var                      string
          */
-        private string $query = '{
+        protected string $query = '{
             "query": "query {documentsByFolder(folder_id: \"%s\", limit: %d, page: %d) { total data { id name created_at files { original signed } signatures { public_id name email action { name } viewed { created_at } signed { created_at } rejected { created_at } } } } }",
             "variables": {}
         }';
