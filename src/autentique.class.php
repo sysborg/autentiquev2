@@ -17,6 +17,20 @@
         ];
 
         /**
+         * @description-en-US:       Stores CURL_INFO
+         * @description-pt-BR:       Armazena CURL_INFO
+         * @var                      string
+         */
+        private string $curlError;
+
+        /**
+         * @description-en-US:       Stores CURL_ERROR
+         * @description-pt-BR:       Armazena CURL_ERROR
+         * @var                      array
+         */
+        private array $curlInfo;
+
+        /**
          * @description-en-US       Construct the class with the desired layout
          * @description-pt-BR       Constrói a classe com o layout desejado
          * @author                  Anderson Arruda < andmarruda@gmail.com >
@@ -68,16 +82,33 @@
          * @author                  Anderson Arruda < andmarruda@gmail.com >
          * @version                 1.0.0
          * @access                  public
-         * @param                   CurlHandle $c
+         * @param                   
          * @return                  void
          */
-        public function curlDebug(\CurlHandle $c) : void
+        public function curlDebug() : void
         {
-            $infos = curl_getinfo($c);
-            $error = curl_error($c);
             echo '<pre>';
-            var_dump($infos, $error);
+            var_dump($this->curlInfo, $this->curlError);
             echo '</pre>';
+        }
+
+        /**
+         * @description-en-US       Debug informations autentique class and CURL
+         * @descritpion-pt-BR       Informações de debug para classe autentique e CURL
+         * @author                  Anderson Arruda < andmarruda@gmail.com >
+         * @version                 1.0.0
+         * @access                  public
+         * @param                   
+         * @return                  array
+         */
+        public function __debugInfo() : array
+        {
+            return [
+                'API_SETTINGS' => $this->apiInfo,
+                'LAYOUT'       => $this->layout->__debugInfo(),
+                'CURL_ERROR'   => $this->curlError ?? '',
+                'CURL_INFO'    => $this->curlInfo ?? []
+            ];
         }
 
         /**
@@ -104,8 +135,10 @@
                 ]
             ]);
             $r = curl_exec($c);
-            if($this->debug)
-                $this->curlDebug($c);
+            if($this->debug){
+                $this->curlError = curl_error($c);
+                $this->curlInfo = curl_getinfo($c);
+            }
                 
             curl_close($c);
             return $r;
