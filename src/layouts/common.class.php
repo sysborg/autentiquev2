@@ -34,5 +34,26 @@
             $this->verifyColumn($this->layoutInfo, $layoutInfoName);
             return $this->layoutInfo[$layoutInfoName];
         }
+
+        /**
+         * @description-en-US       Debug informations for layouts
+         * @descritpion-pt-BR       Informações de debug para os layouts
+         * @author                  Anderson Arruda < andmarruda@gmail.com >
+         * @version                 1.0.0
+         * @access                  public
+         * @param                   
+         * @return                  array
+         */
+        public function __debugInfo() : array
+        {
+            return [
+                'class'        => get_called_class(),
+                'variables'    => $this->layoutInfo,
+                'graphqlQuery' => [
+                    'formated' => $this->parse(),
+                    'normal'   => $this->query
+                ]
+            ];
+        }
     }
 ?>
