@@ -17,14 +17,14 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
          * @description-pt-BR:       Armazena informações dos assinantes
          * @var                      array
          */
-        private array $signers = [];
+        protected array $signers = [];
 
         /**
          * @description-en-US:       Stores the query of graphql
          * @description-pt-BR:       Armazena a query do graphql
          * @var                      string
          */
-        private string $query = '{
+        protected string $query = '{
             "query": "mutation CreateDocumentMutation( $document: DocumentInput!, $signers: [SignerInput!]!, $file: Upload! ) { createDocument( document: $document, signers: $signers, file: $file ) { id name refusable sortable created_at signatures { public_id name email created_at action { name } link { short_link } user { id name email } } } }",
             "variables": { "document": { "name": "%s" }, "signers": %s, "file": null }
         }';
