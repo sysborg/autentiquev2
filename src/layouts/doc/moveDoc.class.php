@@ -1,31 +1,39 @@
 <?php
-    require_once __DIR__. '/../src/autoloader.php';
-    use sysborg\autentiquev2\moveDoc;
-    use sysborg\autentiquev2\autentique;
-    
-    $token = ''; //en-US: put your autentique's token here https://www.autentique.com.br/ | pt-BR: coloque seu token da autentique aqui https://www.autentique.com.br/
+    namespace sysborg\autentiquev2;
 
-    /**
-     * en-US: Calling the desired layout and passing the variables expecteds and disred. At this case the documents's list inside a directory
-     * pt-BR: Invoca o layout desejado e passa as variáveis esperadas e desejadas. Nesse caso a listagem de documentos dentro de um diretório "pasta"
-     */
-    $l = new moveDoc();
-    $l->folder_id = '';
-    $l->document_id = '';
+    class moveDoc extends common implements \sysborg\autentiquev2\layouts{
+        /**
+         * @description-en-US:       Stores informations and variables for this layout
+         * @description-pt-BR:       Armazena informações e variáveis para esse layout
+         * @var                      array
+         */
+        protected array $layoutInfo = [
+            'document_id' => '',
+            'folder_id' => ''
+        ];
 
-    /**
-     * en-US: Invokes the autentique api to transmit data by curl and recive the response
-     * pt-BR: Invoca a api do autentique e transmite os dados por curl e recebe a resposta
-     */
+        /**
+         * @description-en-US:       Stores the query of graphql
+         * @description-pt-BR:       Armazena a query do graphql
+         * @var                      string
+         */
+        protected string $query = '{
+            "query": "mutation { moveDocumentToFolder( document_id: \"%s\", folder_id: \"%s\" ) }",
+            "variables": {}
+        }';
 
-    $t = new autentique($l);
-    $t->token=$token;
-    $r = $t->transmit();
-    echo '//en-US: Clean response | pt-BR: Resposta limpa<br><pre>';
-    var_dump($r); //en-US: Clean response | pt-BR: Resposta limpa
-    echo '</pre>';
-
-    echo '<br><br>//en-US: Response decoded | pt-BR: Resposta decodificada<br><pre>';
-    var_dump(json_decode($r, true)); //en-US: Response decoded | pt-BR: Resposta decodificada
-    echo '</pre>';
+        /**
+         * @description-en-US       Parse the values on the graphql schema and returns as string
+         * @description-pt-BR       Parse os valores no schema do graphql e retorna como string
+         * @author                  Anderson Arruda < andmarruda@gmail.com >
+         * @version                 1.0.0
+         * @access                  public
+         * @param                   
+         * @return                  string
+         */
+        public function parse() : string
+        {
+            return sprintf($this->query, $this->document_id, $this->folder_id);
+        }
+    }
 ?>
