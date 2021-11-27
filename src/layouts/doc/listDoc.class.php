@@ -17,7 +17,7 @@
          * @description-pt-BR:       Armazena a query do graphql
          * @var                      string
          */
-        private string $query = '{
+        protected string $query = '{
             "query": "query { documents(limit: %d, page: %d) { total data { id name refusable sortable created_at signatures { public_id name email created_at action { name } link { short_link } user { id name email } viewed { created_at } signed { created_at } rejected { created_at } } files { original signed } } } }",
             "variables": {}
         }';
