@@ -6,8 +6,8 @@
     $token = ''; //en-US: put your autentique's token here https://www.autentique.com.br/ | pt-BR: coloque seu token da autentique aqui https://www.autentique.com.br/
 
     /**
-     * en-US: Calling the desired layout and passing the variables expecteds and disred. At this case the documents's list inside a directory
-     * pt-BR: Invoca o layout desejado e passa as variáveis esperadas e desejadas. Nesse caso a listagem de documentos dentro de um diretório "pasta"
+     * en-US: Calling the desired layout and passing the variables expecteds and disred. At this case signing a document
+     * pt-BR: Invoca o layout desejado e passa as variáveis esperadas e desejadas. Nesse caso assinando um documento
      */
     $l = new signDoc();
     $l->document_id = '';
