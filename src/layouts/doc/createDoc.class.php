@@ -36,68 +36,40 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
          * version                  1.0.0
          * access                   public
          * param                    string $email - "Email of the signer | Email do assinante"
-         * param                    int $x        - "X axis of the signature | eixo x da assinatura"
-         * param                    int $y        - "Y axis of the signature | eixo y da assinatura"
-         * param                    int $z        - "Z is the page of signatura | Z é a página da assinatura"
-         * return                   object
+         * return                   docSignaturePosition
          */
-        public function addSigners(string $email, int $x, int $y, int $z) : object
+        public function addSigners(string $email) : docSignaturePosition
         {
             $this->verifyEmail('email', $email);
-            $idx = count($this->signers);
+            $positions = new docSignaturePosition();
             array_push($this->signers, [
                 'email'     => $email,
                 'action'    => 'SIGN',
-                'positions' => [[
-                    'x' => $x,
-                    'y' => $y,
-                    'z' => $x
-                ]]
+                'positionsObject' => $positions
             ]);
 
-            return new class($this->signers[$idx]){
-                /**
-                 * @description-en-US:       Store information about actual signer
-                 * @description-pt-BR:       Armazena informações sobre o assinante atual
-                 * @var                      array
-                 */
-                private array $signer;
+            return $positions;
+        }
 
-                /**
-                 * @description-en-US       Recieves the actual signer's dimension opening possibility to add new sign positions
-                 * @description-pt-BR       Recebe a dimensão assinante atual abrindo a possibilidade para adicionar novas posições de assinatura
-                 * author                   Anderson Arruda < andmarruda@gmail.com >
-                 * version                  1.0.0
-                 * access                   public
-                 * param                    int $x        - "X axis of the signature | eixo x da assinatura"
-                 * param                    int $y        - "Y axis of the signature | eixo y da assinatura"
-                 * param                    int $z        - "Z is the page of signatura | Z é a página da assinatura"
-                 * return                   void
-                 */
-                public function __construct(&$signer){
-                    $this->signer = $signer;
-                }
+        /**
+         * @description-en-US       Prepare signers to the parse
+         * @description-pt-BR       Prepara signatários para o parse
+         * author                   Anderson Arruda < andmarruda@gmail.com >
+         * param                    
+         * return                   array
+         */
+        public function signersToParse() : array
+        {
+            $signers = $this->signers;
+            foreach($signers as $k => $signer){
+                $pos = $signer['positionsObject']->getPositions();
+                if(count($pos) > 0)
+                    $signers[$k]['positions'] = $pos;
 
-                /**
-                 * @description-en-US       Add sign postion to existings signer
-                 * @description-pt-BR       Adiciona uma posição de assinatura a um assinante existente
-                 * author                   Anderson Arruda < andmarruda@gmail.com >
-                 * version                  1.0.0
-                 * access                   public
-                 * param                    int $x        - "X axis of the signature | eixo x da assinatura"
-                 * param                    int $y        - "Y axis of the signature | eixo y da assinatura"
-                 * param                    int $z        - "Z is the page of signatura | Z é a página da assinatura"
-                 * return                   void
-                 */
-                public function addPositions(int $x, int $y, int $z) : void
-                {
-                    array_push($this->signer['positions'], [
-                        'x' => $x,
-                        'y' => $y,
-                        'z' => $x
-                    ]);
-                }
-            };
+                unset($signers[$k]['positionsObject']);
+            }
+
+            return $signers;
         }
 
         /**
@@ -116,7 +88,7 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
             $this->verifyFile('file', $this->file);
             $this->verifyArray('signers', $this->signers);
 
-            $query = sprintf($this->query, $this->name, json_encode($this->signers));
+            $query = sprintf($this->query, $this->name, json_encode($this->signersToParse()));
 
             $arr = [
                 'operations' => $query,
