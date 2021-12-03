@@ -10,13 +10,11 @@
      * pt-BR: Invoca o layout desejado e passa as variáveis esperadas e desejadas. Nesse caso a criação e upload do documento com múltiplas assinaturas do mesmo assinante
      */
     $l = new createDoc();
-    $l->name = 'Test with two signer';
+    $l->name = 'Test with one signer';
     $l->file = __DIR__. '/examples/doc1.pdf';
-    $signer = $l->addSigners('email@gmail.com');
+    $signer = $l->addSigners('teste@gmail.com');
     $signer->addPositions(20, 70, 1, 'SIGNATURE');
     $signer->addPositions(50, 20, 2, 'SIGNATURE');
-
-    var_dump($signer); die;
 
     /**
      * en-US: Invokes the autentique api to transmit data by curl and recive the response
