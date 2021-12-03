@@ -12,7 +12,7 @@
     $l = new createDoc();
     $l->name = 'Test with one signer';
     $l->file = __DIR__. '/examples/doc1.pdf';
-    $signer = $l->addSigners('andmarruda@gmail.com', 80, 70, 1);
+    $signer = $l->addSigners('email@gmail.com');
 
     /**
      * en-US: Invokes the autentique api to transmit data by curl and recive the response
@@ -29,5 +29,7 @@
 
     echo '<br><br>//en-US: Response decoded | pt-BR: Resposta decodificada<br><pre>';
     var_dump(json_decode($r, true)); //en-US: Response decoded | pt-BR: Resposta decodificada
-    echo '</pre>';
+    echo '</pre><br><br>';
+
+    var_dump($t);
 ?>
