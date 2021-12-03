@@ -12,7 +12,7 @@
     $l = new createDoc();
     $l->name = 'Test with one signer';
     $l->file = __DIR__. '/examples/doc1.pdf';
-    $signer = $l->addSigners('email@gmail.com');
+    $signer = $l->addSigners('example@gmail.com');
 
     /**
      * en-US: Invokes the autentique api to transmit data by curl and recive the response
