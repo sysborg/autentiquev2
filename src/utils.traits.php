@@ -39,7 +39,8 @@
          * @description-en-US       Verify email with regex
          * @description-pt-BR       Verifica email com regex
          * @author                  Anderson Arruda < andmarruda@gmail.com >
-         * @version                 1.0.0
+         * @version                 1.0.1
+         * @changes                 Correcting the regular expression for email, suggested by @FalaiTio from issue#2
          * @access                  public
          * @param                   string $variableName
          * @param                   string $email
