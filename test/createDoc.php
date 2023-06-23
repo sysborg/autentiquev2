@@ -4,6 +4,7 @@
     use sysborg\autentiquev2\autentique;
     
     $token = ''; //en-US: put your autentique's token here https://www.autentique.com.br/ | pt-BR: coloque seu token da autentique aqui https://www.autentique.com.br/
+    $sandboxMode = false; //en-US: change the sandbox mode to create test documents, if wanted | pt-BR: mude o modo sandbox para criar documentos teste, se desejado
 
     /**
      * en-US: Calling the desired layout and passing the variables expecteds and disred. At this case the document creation and upload
@@ -22,6 +23,7 @@
     $t = new autentique($l);
     $t->debug=true;
     $t->token=$token;
+    $t->devMode=$sandboxMode;
     $r = $t->transmit();
     echo '//en-US: Clean response | pt-BR: Resposta limpa<br><pre>';
     var_dump($r); //en-US: Clean response | pt-BR: Resposta limpa

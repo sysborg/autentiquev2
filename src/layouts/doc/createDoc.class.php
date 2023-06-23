@@ -8,7 +8,7 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
          * @var                      array
          */
         protected array $layoutInfo = [
-            'name' => NULL,
+            'name' => NULL, 
             'file' => NULL
         ];
 
@@ -19,13 +19,20 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
          */
         protected array $signers = [];
 
+         /**
+         * @description-en-US:       Stores information about whether the document will be created in sandbox mode or not
+         * @description-pt-BR:       Armazena informações sobre se o documento será criado no modo sandbox ou não
+         * @var                      bool
+         */
+        protected bool $sandbox;
+
         /**
          * @description-en-US:       Stores the query of graphql
          * @description-pt-BR:       Armazena a query do graphql
          * @var                      string
          */
         protected string $query = '{
-            "query": "mutation CreateDocumentMutation( $document: DocumentInput!, $signers: [SignerInput!]!, $file: Upload! ) { createDocument( document: $document, signers: $signers, file: $file ) { id name refusable sortable created_at signatures { public_id name email created_at action { name } link { short_link } user { id name email } } } }",
+            "query": "mutation CreateDocumentMutation( $document: DocumentInput!, $signers: [SignerInput!]!, $file: Upload! ) { createDocument( sandbox: {{ %sandbox }}, document: $document, signers: $signers, file: $file ) { id name refusable sortable created_at signatures { public_id name email created_at action { name } link { short_link } user { id name email } } } }",
             "variables": { "document": { "name": "%s" }, "signers": %s, "file": null }
         }';
 
@@ -90,13 +97,29 @@ class createDoc extends common implements \sysborg\autentiquev2\layouts{
 
             $query = sprintf($this->query, $this->name, json_encode($this->signersToParse()));
 
+            if($this->sandbox === null){
+                $this->setDevMode(false);
+            }
+        
             $arr = [
                 'operations' => $query,
                 'map'        => '{"file": ["variables.file"]}',
-                'file'       => new \CURLFile($this->file)
+                'file'       => new \CURLFile($this->file),
             ];
 
             return $arr;
+        }
+
+        /**
+         * @description-en-US       Configure the creation of the document on sandbox mode or not, replacing the {{ %sandbox }} placeholder inside the query to true or false
+         * @description-pt-BR       Configura a criação do documento no modo sandbox ou não, substituindo o placeholder {{ %sandbox }} dentro da query para true ou false
+         * author                   João Manoel Borges < jm.borges7312@gmail.com >
+         * param                    bool $mode - "True or false if it should be in sandbox mode | True ou falso se deve estar em modo sandbox
+         * return                   void
+         */
+        public function setDevMode(bool $mode) : void{
+            $this->sandbox = $mode;
+            $this->query = str_replace('{{ %sandbox }}', $mode ? 'true' : 'false', $this->query);
         }
     }
 ?>

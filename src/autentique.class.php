@@ -59,6 +59,11 @@
                 throw new \Exception('en-US: devMode expects boolean and '. gettype($val). ' are given! | pt-BR: devMode espera boolean e '. gettype($val). ' foi passado!');
 
             $this->apiInfo[$apiInfoName] = $val;
+
+            if($apiInfoName === 'devMode' && $this->layout instanceof createDoc){
+                $this->setDevMode($val);
+            }
+
         }
 
         /**
@@ -142,6 +147,17 @@
                 
             curl_close($c);
             return $r;
+        }
+
+        /**
+         * @description-en-US       Configure the use of the API on sandbox mode or not (document creation only)
+         * @description-pt-BR       Configura o uso da API no modo sandbox ou não  (apenas criação de documentos)
+         * @author                  João Manoel Borges < jm.borges7312@gmail.com >
+         * @param                   bool $devMode - true or false
+         * @return                  void
+         */
+        protected function setDevMode(bool $devMode): void{
+            $this->layout->setDevMode($devMode);
         }
     }
 ?>
